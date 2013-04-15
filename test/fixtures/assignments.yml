@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  due_date: MyString
+  number: MyString
+  name: MyString
+
+two:
+  due_date: MyString
+  number: MyString
+  name: MyString
