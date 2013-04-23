@@ -1,7 +1,8 @@
 class Assignment
   include Mongoid::Document
 
-  belongs_to :course
+  embedded_in :lecture
+  has_many :uploads
 
   field :due_date, type: String
   field :number, type: String

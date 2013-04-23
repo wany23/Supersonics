@@ -2,14 +2,14 @@
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Times</th>
-    <th>Days</th>
-    <th>Department</th>
-    <th>Number</th>
-    <th>Room</th>
-    <th>Professor</th>
-    <th>Call number</th>
+    <th>Coursetitle</th>
+    <th>Starttime1</th>
+    <th>Endtime1</th>
+    <th>Meetson1</th>
+    <th>Building1</th>
+    <th>Room1</th>
+    <th>Instructor1name</th>
+    <th>Callnumber</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,14 +17,14 @@
 
 <% @courses.each do |course| %>
   <tr>
-    <td><%= course.title %></td>
-    <td><%= course.times %></td>
-    <td><%= course.days %></td>
-    <td><%= course.department %></td>
-    <td><%= course.number %></td>
-    <td><%= course.room %></td>
-    <td><%= course.professor %></td>
-    <td><%= course.call_number %></td>
+    <td><%= course.CourseTitle %></td>
+    <td><%= course.StartTime1 %></td>
+    <td><%= course.EndTime1 %></td>
+    <td><%= course.MeetsOn1 %></td>
+    <td><%= course.Building1 %></td>
+    <td><%= course.Room1 %></td>
+    <td><%= course.Instructor1Name %></td>
+    <td><%= course.CallNumber %></td>
     <td><%= link_to 'Show', course %></td>
     <td><%= link_to 'Edit', edit_course_path(course) %></td>
     <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

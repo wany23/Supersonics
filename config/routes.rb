@@ -16,7 +16,7 @@ Supersonics::Application.routes.draw do
 
   resources :categories
 
-  root :to => "home#index"
+  root :to => "sessions#new"
 
   match "signup" => "users#new", :as => "signup"
   post "login" => "sessions#create", :as => "login"
