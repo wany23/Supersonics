@@ -4,7 +4,10 @@ class User
   has_and_belongs_to_many :courses
   has_many :uploads
 
+  ROLES = %w[Admin Student]
+
   field :first_name, type: String
   field :last_name, type: String
   field :email, type: String
+  field :role, type: String, default: "Student"
 end

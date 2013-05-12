@@ -41,5 +41,13 @@
 </p>
 
 
+<p>
+  <% if @user=@course.users.find(params[:id]).Count() > 0 %>
+    <b>Assignments:</b>
+    <%= @course.Assignments %>
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
