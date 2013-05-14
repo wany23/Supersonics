@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_filter :require_user, :only => [:new, :create]
+  skip_before_filter :is_admin
 
   def new
   end
@@ -19,5 +20,4 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url
   end
-
 end

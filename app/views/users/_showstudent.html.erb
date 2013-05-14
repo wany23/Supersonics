@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Courses</h1>
+
+<table>
+  <tr>
+    <th>Course Title</th>
+    <th>Time</th>
+    <th>Meets On</th>
+    <th>Instructor Name</th>
+    <th></th>
+  </tr>
+
+<% @user.courses.each do |course| %>
+  <tr>
+    <td><%= course.CourseTitle %></td>
+    <td><%= course.StartTime1 %>-
+        <%= course.EndTime1 %></td>
+    <td><%= course.MeetsOn1 %></td>
+    <td><%= course.Instructor1Name %></td>
+    <td><%= link_to 'Show', course %></td>
+  </tr>
+<% end %>
+</table>

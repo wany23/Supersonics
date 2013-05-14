@@ -1,0 +1,16 @@
+<p>
+  <% if not @current_user %>
+  	<%= link_to 'Signup', signup_url %> |
+    <%= link_to 'Login', login_url %> |
+  <% end %>
+  <% if @current_user %>
+	  <% if @current_user.role == "Student" %>
+	  <%= link_to 'My Courses', @current_user %> |
+	  <% end %>
+	    <% if @current_user.role == "Admin" %>
+	  <%= link_to 'Home', @current_user %> |
+	  <% end %>
+	  	  <%= link_to 'My Information', edit_user_path(@current_user) %>|
+	  <%= link_to 'Logout', logout_path %>
+	<% end %>
+</p>

@@ -13,7 +13,6 @@ Supersonics::Application.routes.draw do
 
   resources :users
 
-
   resources :categories
 
   root :to => "sessions#new"

@@ -6,32 +6,32 @@
 </p>
 
 <p>
-  <b>Starttime1:</b>
+  <b>Starttime:</b>
   <%= @course.StartTime1 %>
 </p>
 
 <p>
-  <b>Endtime1:</b>
+  <b>Endtime:</b>
   <%= @course.EndTime1 %>
 </p>
 
 <p>
-  <b>Meetson1:</b>
+  <b>Meetson:</b>
   <%= @course.MeetsOn1 %>
 </p>
 
 <p>
-  <b>Building1:</b>
+  <b>Building:</b>
   <%= @course.Building1 %>
 </p>
 
 <p>
-  <b>Room1:</b>
+  <b>Room:</b>
   <%= @course.Room1 %>
 </p>
 
 <p>
-  <b>Instructor1name:</b>
+  <b>Instructor Name:</b>
   <%= @course.Instructor1Name %>
 </p>
 
@@ -40,14 +40,11 @@
   <%= @course.CallNumber %>
 </p>
 
-
-<p>
-  <% if @user=@course.users.find(params[:id]).Count() > 0 %>
-    <b>Assignments:</b>
-    <%= @course.Assignments %>
-  <% end %>
-</p>
-
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
+<% if @current_user.role == "Admin" %>
+  <%= link_to 'Edit', edit_course_path(@course) %> |
+<% end %>
+<% if @current_user.role == "Admin" %>
+<%= link_to 'Destroy', @course, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %>
 <%= link_to 'Back', courses_path %>
+

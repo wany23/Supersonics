@@ -1,0 +1,17 @@
+<p>
+  <% if @user=@course.users.find(params[:id]).Count() > 0 %>
+    <b>Assignments:</b>
+    <%= @course.Assignments %>
+  <% end %>
+</p>
+
+
+users_controller
+  def adminedit
+  end
+
+
+  routes.rb
+    resources :users do
+    get "adminedit" => "users#adminedit", :as => "adminedit"
+  end

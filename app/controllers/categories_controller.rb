@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
+  skip_before_filter :is_admin, :only => [:show, :new]
   def index
     @categories = Category.all
 

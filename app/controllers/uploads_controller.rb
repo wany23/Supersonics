@@ -1,6 +1,7 @@
 class UploadsController < ApplicationController
   # GET /uploads
   # GET /uploads.json
+  skip_before_filter :is_admin, :only => [:show, :new]
   def index
     @uploads = Upload.all
 
