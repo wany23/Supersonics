@@ -86,11 +86,14 @@ class CoursesController < ApplicationController
   end
 
   def submituser
-    @course = Course.find(params[:id])
+    @course = Course.find(params[:course_id])
     @submit = User.where(last_name: params[:last_name]).first
     @course.user_ids << @submit.id
     @course.save
 
     redirect_to course_path(@course)
+  end
+
+  def usersincourse
   end
 end
