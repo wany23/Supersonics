@@ -1,10 +1,10 @@
 class User
   include Mongoid::Document
-
   def to_param
       last_name
   end
 
+  validates_presence_of :email
   has_and_belongs_to_many :courses
   has_many :uploads
 
