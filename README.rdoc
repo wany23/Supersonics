@@ -1,1 +1,12 @@
-Rails + the D3 Javascript Library on Wed April 17th.
+
+
+ClassOnRails is the Ruby on Rails project by Wandrille Hubert uni:weh2115
+
+I have chosen to do a few extra implementations which are the discussion board, cleaning up URLs, and uploading a file.
+
+To login as an admin use wany23@gmail.com.  As an admin, you can edit users, their roles (either admin or student), courses, assignments, uploads, lectures, etc...  They can also add users to a course page.  It is done by asking for the user's last_name.
+
+Students can edit their own information but not their role or anybody elses information.  Furthermore, users do not have access to the list of other users nor can create, edit, or destroy a course.  There is a link on the header to the forum page.
+
+I ran into a few problems.  On the show page of the course, I have a link for when the admin is connected to "Users In Course" but it is giving me an undefined method for users error.  Secondly, on my forum, when you go down into a forum, then into a topic, on the show page of the topic it is supposed to show all the posts associated with it, but this is not working.  I have tried a variety of different things but with no luck.  Finally, I tried a variety of different codes I saw online to try to get the file upload system working, but I was not able to.  So on the courses show page I have an upload file link where one can be created but not an actual file being uploaded.
+

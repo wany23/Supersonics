@@ -46,6 +46,7 @@
 <% if @current_user.role == "Admin" %>
   <%= link_to 'Destroy', @course, method: :delete, data: { confirm: 'Are you sure?' } %> |
   <%= link_to 'Add User', course_adduser_path(@course) %> |
+   <%= link_to 'Users In Course', course_usersincourse_path(@course) %> |
 <% end %>
 <%= link_to 'Back', courses_path %>
 

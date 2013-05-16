@@ -11,6 +11,7 @@ Supersonics::Application.routes.draw do
   resources :courses do
     get "adduser" => "courses#adduser", :as => "adduser"
     post "adduser" => "courses#submituser", :as => "adduser"
+    get "usersincourse" => "courses#usersincourse", :as => "usersincourse"
   end
 
 
