@@ -81,4 +81,16 @@ class CoursesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def adduser
+  end
+
+  def submituser
+    @course = Course.find(params[:id])
+    @submit = User.where(last_name: params[:last_name]).first
+    @course.user_ids << @submit.id
+    @course.save
+
+    redirect_to course_path(@course)
+  end
 end

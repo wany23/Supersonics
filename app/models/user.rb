@@ -14,4 +14,7 @@ class User
   field :last_name, type: String
   field :email, type: String
   field :role, type: String, default: "Student"
+
+  validates :email, :presence => true, :uniqueness => true
+  validates_presence_of :first_name
 end

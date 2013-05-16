@@ -1,8 +1,22 @@
 Supersonics::Application.routes.draw do
-  resources :courses
+  resources :posts
 
 
-  resources :uploads
+  resources :topics
+
+
+  resources :forums
+
+
+  resources :courses do
+    get "adduser" => "courses#adduser", :as => "adduser"
+    post "adduser" => "courses#submituser", :as => "adduser"
+  end
+
+
+  resources :uploads do
+    collection { post :upload_file}
+  end
 
 
   resources :assignments

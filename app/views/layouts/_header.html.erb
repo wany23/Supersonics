@@ -10,7 +10,8 @@
 	    <% if @current_user.role == "Admin" %>
 	  <%= link_to 'Home', @current_user %> |
 	  <% end %>
-	  	  <%= link_to 'My Information', edit_user_path(@current_user) %>|
+	  	<%= link_to 'My Information', edit_user_path(@current_user) %> |
+	  	<%= link_to 'Forum', forums_path %> |
 	  <%= link_to 'Logout', logout_path %>
 	<% end %>
 </p>

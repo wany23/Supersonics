@@ -1,22 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Coursetitle:</b>
+  <%= link_to 'Upload File', new_upload_path %>
+</p>
+
+<p>
+  <b>Course Title:</b>
   <%= @course.CourseTitle %>
 </p>
 
 <p>
-  <b>Starttime:</b>
-  <%= @course.StartTime1 %>
-</p>
-
-<p>
-  <b>Endtime:</b>
+  <b>Time:</b>
+  <%= @course.StartTime1 %>-
   <%= @course.EndTime1 %>
 </p>
 
 <p>
-  <b>Meetson:</b>
+  <b>Meets On:</b>
   <%= @course.MeetsOn1 %>
 </p>
 
@@ -36,7 +36,7 @@
 </p>
 
 <p>
-  <b>Callnumber:</b>
+  <b>Call Number:</b>
   <%= @course.CallNumber %>
 </p>
 
@@ -44,7 +44,8 @@
   <%= link_to 'Edit', edit_course_path(@course) %> |
 <% end %>
 <% if @current_user.role == "Admin" %>
-<%= link_to 'Destroy', @course, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <%= link_to 'Destroy', @course, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <%= link_to 'Add User', course_adduser_path(@course) %> |
 <% end %>
 <%= link_to 'Back', courses_path %>
 

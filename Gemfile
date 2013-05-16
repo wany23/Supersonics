@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'mongoid'
+gem 'twitter-bootstrap-rails'
+gem 'less-rails'
+gem 'therubyracer'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -38,6 +38,11 @@ class UploadsController < ApplicationController
     @upload = Upload.find(params[:id])
   end
 
+  def upload_file
+    DataFile.save_file(params[:upload])
+    redirect_to @user
+  end
+
   # POST /uploads
   # POST /uploads.json
   def create

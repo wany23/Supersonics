@@ -1,0 +1,5 @@
+<%= form_tag course_adduser_path,:method => "post", class: 'join' do %>
+  <p>Enter The Student's Last Name Below:</p>
+  <%= text_field_tag "last_name" %>
+  <%= submit_tag %>
+<% end %>
